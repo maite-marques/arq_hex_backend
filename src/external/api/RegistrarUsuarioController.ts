@@ -10,6 +10,7 @@ export default class RegistrarUsuarioController {
           email: req.body.email,
           senha: req.body.senha
         })
+        res.status(201).send()
       } catch(erro: any) {
         res.status(400).send(erro.message)
       }
