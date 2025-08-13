@@ -32,5 +32,13 @@ External (adapter no padrão port and adapters)
             -> Adaptador -> DB
 
 
+chain of responsability
+- Nos middlewares do express, você consegue tratar em diferentes middlewares cada requisição, que vai sendo tratada e enviada ao próximo middleware, passando por essa cadeia de responsabilidade.
+- Dentro de uma requisição post é possível colocar uma cadeia de handlers para tratar a req.
+
+  Exemplo: 
+    request => body parsing next() => auth next() => router
+
+
   ## Ports & Adapters
   Arquitetura hexagonal, define um padrão de design onde exitem portas e adaptadores. Cada adaptador deve se encaixar em uma porta através de uma interface específica, tornando a conexão de diferentes adaptadores mais fácil, permitindo a troca de adaptador se necessário de forma limpa e organizada.
